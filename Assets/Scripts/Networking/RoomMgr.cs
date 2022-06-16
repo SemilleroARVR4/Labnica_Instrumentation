@@ -16,6 +16,7 @@ public class RoomMgr : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        
         if(!PhotonNetwork.InRoom)
         {
             foreach (UIRoom room in panelRooms.GetComponentsInChildren<UIRoom>())
@@ -25,7 +26,7 @@ public class RoomMgr : MonoBehaviourPunCallbacks
         }
         Debug.Log("Rooms: " + roomList.Count);
     }
-
+    
     public void CrearRoom()
     {
         canvasLobby.gameObject.SetActive(false);
